@@ -76,10 +76,9 @@ void Automata::check() {
         state = CHECK;
             if (cash >= price[currChoice]) {
                 std::cout << "Баланс достаточный для покупки" << std::endl;
-            }
-            else {
+            } else {
                 std::cout << "Пополните баланс" << std::endl;
-            } 
+            }
     } else {
         std::cout << "Некорректное состояние или запрос" << std::endl;
     }
