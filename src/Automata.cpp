@@ -63,7 +63,7 @@ void Automata::choice(int choice) {
         state = CHECK;
         if (choice > menu.size()) {
             std::cout << "Нет напитка с данным номером" << std::endl;
-            state == ACCEPT
+            state == ACCEPT;
         }
         currChoice = choice;
     } else {
