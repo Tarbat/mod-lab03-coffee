@@ -2,11 +2,9 @@
 #include "Automata.h"
 #include <locale>
 #include <codecvt>
+#include <iostream>
 
 int main() {
-    std::locale::global(std::locale("en_US.UTF-8"));
-    std::wcout.imbue(std::locale());
-
     Automata automata;
     automata.on();
     automata.getMenu();

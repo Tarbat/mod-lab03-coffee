@@ -20,7 +20,7 @@ class Automata {
     std::vector<int> price;
     STATES state;
 
-public: 
+ public:
     Automata();
     void on();
     void off();

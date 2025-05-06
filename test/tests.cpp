@@ -1,6 +1,5 @@
-// Copyright 2022 GHA Test Team
+п»ї// Copyright 2022 GHA Test Team
 #include <gtest/gtest.h>
-#include <string>
 #include "Automata.h"
 
 TEST(task, test1) {
@@ -20,8 +19,7 @@ TEST(task, test3) {
     automata.cook();
     testing::internal::CaptureStdout();
     std::string output = testing::internal::GetCapturedStdout();
-    EXPECT_NE(output.find("Некорректное состояние или запрос"),
-    std::string::npos);
+    EXPECT_NE(output.find("РќРµРєРѕСЂСЂРµРєС‚РЅРѕРµ СЃРѕСЃС‚РѕСЏРЅРёРµ РёР»Рё Р·Р°РїСЂРѕСЃ"), std::string::npos);
 }
 
 TEST(task, test4) {
@@ -56,7 +54,7 @@ TEST(task, test7) {
     ASSERT_EQ(automata.getState(), CHECK);
     testing::internal::CaptureStdout();
     std::string output = testing::internal::GetCapturedStdout();
-    EXPECT_NE(output.find("Баланс достаточный для покупки"), std::string::npos);
+    EXPECT_NE(output.find("Р‘Р°Р»Р°РЅСЃ РґРѕСЃС‚Р°С‚РѕС‡РЅС‹Р№ РґР»СЏ РїРѕРєСѓРїРєРё"), std::string::npos);
 }
 
 TEST(task, test8) {
@@ -78,7 +76,7 @@ TEST(task, test9) {
     ASSERT_EQ(automata.getState(), WAIT);
     testing::internal::CaptureStdout();
     std::string output = testing::internal::GetCapturedStdout();
-    EXPECT_NE(output.find("Возврашена сдача в размере: 30"), std::string::npos);
+    EXPECT_NE(output.find("Р’РѕР·РІСЂР°С€РµРЅР° СЃРґР°С‡Р° РІ СЂР°Р·РјРµСЂРµ: 30"), std::string::npos);
 }
 
 TEST(task, test10) {
