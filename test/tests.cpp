@@ -87,6 +87,7 @@ TEST(task, test10) {
     automata.coin(30);
     automata.choice(1);
     automata.check();
+    automata.check();
     automata.cook();
     automata.finish();
     automata.off();
