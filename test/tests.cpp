@@ -17,8 +17,8 @@ TEST(task, test2) {
 TEST(task, test3) {
     Automata automata;
     automata.on();
-    automata.cook();
     testing::internal::CaptureStdout();
+    automata.cook();
     std::string output = testing::internal::GetCapturedStdout();
     EXPECT_NE(output.find("Некорректное состояние или запрос"),
     std::string::npos);
@@ -52,9 +52,9 @@ TEST(task, test7) {
     automata.on();
     automata.coin(30);
     automata.choice(1);
+    testing::internal::CaptureStdout();
     automata.check();
     ASSERT_EQ(automata.getState(), CHECK);
-    testing::internal::CaptureStdout();
     std::string output = testing::internal::GetCapturedStdout();
     EXPECT_NE(output.find("Баланс достаточный для покупки"), std::string::npos);
 }
@@ -74,9 +74,9 @@ TEST(task, test9) {
     automata.on();
     automata.coin(30);
     automata.choice(1);
+    testing::internal::CaptureStdout();
     automata.cancel();
     ASSERT_EQ(automata.getState(), WAIT);
-    testing::internal::CaptureStdout();
     std::string output = testing::internal::GetCapturedStdout();
     EXPECT_NE(output.find("Возврашена сдача в размере: 30"), std::string::npos);
 }
