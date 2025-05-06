@@ -1,6 +1,6 @@
 // Copyright 2022 GHA Test Team
-#ifndef AUTOMATA_H
-#define AUTOMATA_H
+#ifndef INCLUDE_AUTOMATA_H_
+#define INCLUDE_AUTOMATA_H_
 
 #include <vector>
 #include <string>
@@ -20,7 +20,7 @@ class Automata {
     std::vector<int> price;
     STATES state;
 
-public:
+public: 
     Automata();
     void on();
     void off();
@@ -33,4 +33,5 @@ public:
     void cook();
     void finish();
 };
-#endif
+
+#endif // INCLUDE_AUTOMATA_H_

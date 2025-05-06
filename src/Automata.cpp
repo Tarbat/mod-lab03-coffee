@@ -18,7 +18,7 @@ void Automata::on() {
         std::cout << "Автомат включен" << std::endl;
     } else {
         std::cout << "Некорректное состояние или запрос" << std::endl;
-    }    
+    }
 }
 
 void Automata::off() {
@@ -76,8 +76,7 @@ void Automata::check() {
         state = CHECK;
             if (cash >= price[currChoice]) {
                 std::cout << "Баланс достаточный для покупки" << std::endl;
-            }
-            else
+            } else
                 std::cout << "Пополните баланс" << std::endl;
     } else {
         std::cout << "Некорректное состояние или запрос" << std::endl;
@@ -101,7 +100,7 @@ void Automata::cook() {
        std::cout << "Процесс готовки" << std::endl;
     } else {
         std::cout << "Некорректное состояние или запрос" << std::endl;
-    }  
+    }
 }
 
 void Automata::finish() {

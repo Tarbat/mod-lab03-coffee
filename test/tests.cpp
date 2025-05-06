@@ -1,5 +1,6 @@
 // Copyright 2022 GHA Test Team
 #include <gtest/gtest.h>
+#include <string>
 #include "Automata.h"
 
 TEST(task, test1) {
@@ -19,7 +20,8 @@ TEST(task, test3) {
     automata.cook();
     testing::internal::CaptureStdout();
     std::string output = testing::internal::GetCapturedStdout();
-    EXPECT_NE(output.find("Некорректное состояние или запрос"), std::string::npos);
+    EXPECT_NE(output.find("Некорректное состояние или запрос"),
+    std::string::npos);
 }
 
 TEST(task, test4) {
